@@ -13,12 +13,12 @@ ollama pull "nxphi47/seallm-7b-v2:q4_0"
 pip install -r requirements.txt
 ```
 ## Usage
-Host ตัว webhook (app.py) เพื่อให้ได้ ้URL ที่เป็น HTTP ซึ่งเข้าถึงได้
+Host ตัว webhook (app.py) เพื่อให้ได้ URL ที่เป็น HTTP ซึ่งเข้าถึงได้
 
 *การเพิ่มข้อมูล : 
 
 1. เพิ่มไฟล์ .docx หรือ .csv ในโฟลเดอร์ dataset
-2. รันสคริปต์ "Load_v_db.py"
+2. รันสคริปต์ "Load_vector_db.py"
 3. ส่ง POST request ไปที่ URL เดียวกับ webhook ที่ /update_v_db
 
 *ข้อมูลที่อยู่ในไฟล์เวิร์ดต้องแบ่งเนื้อหาแต่ละส่วนด้วยการเคาะ new line 2 ครั้ง
