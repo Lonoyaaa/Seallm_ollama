@@ -15,7 +15,7 @@ persistent_client = chromadb.PersistentClient(path='./vector_db')
 
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "GPU-c4cf6995-a8c6-b26b-966c-53edffcd9362"
+os.environ['CUDA_VISIBLE_DEVICES'] = "GPU-c4cf6995-11111111111111111111"
 os.environ['HF_HOME'] = 'D:/Huggingface_cache'
 torch.cuda.empty_cache()
 DATA_PATH = './dataset'
