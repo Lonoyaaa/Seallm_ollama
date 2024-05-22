@@ -84,7 +84,7 @@ def handle_text_message(event):
     user_id = event.source.user_id
     text = event.message.text
     torch.cuda.empty_cache()
-    template = """Answer the question based ONLY on the following context:
+    template = """Answer the question and give contact info of person who response to the matter based ONLY on the following context:
 {context}
 
 Question: {question}
