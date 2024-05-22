@@ -36,6 +36,10 @@ pip install -r requirements.txt
 ```bash
 os.environ['HF_HOME'] = 'path/to/model/stored/folder
 ```
+GPU ที่ใช้ในการประมวลผล (GPU UUID)
+```bash
+os.environ['CUDA_VISIBLE_DEVICES'] = "GPU-UUID"
+```
 ข้อมูลสำคัญสำหรับเข้าถึงบัญชี linebot
 ```bash
 CHANNEL_SECRET = ''
