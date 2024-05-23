@@ -40,17 +40,6 @@ handler = WebhookHandler(CHANNEL_SECRET)
 llm = Ollama(model="nxphi47/seallm-7b-v2:q4_0", 
              callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]),)
 
-# Define the prompt template once
-template = """Answer the question based only on the following context:
-{context}
-
-Question: {question}
-"""
-QA_CHAIN_PROMPT = PromptTemplate(
-    input_variables=["context", "question"],
-    template=template,
-)
-
 #Load data
 vectorstore = Chroma(collection_name='v_db',persist_directory='./vector_db',embedding_function=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large", cache_folder='D:/Huggingface_cache/'))
 
