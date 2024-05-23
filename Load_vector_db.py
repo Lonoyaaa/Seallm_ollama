@@ -27,10 +27,7 @@ for filename in os.listdir(DATA_PATH):
             if filepath.endswith('.docx'):
                 loader = UnstructuredWordDocumentLoader(filepath)
             if filepath.endswith('.csv'):
-                loader = UnstructuredCSVLoader(filepath, {
-                    'delimiter': ',',
-                    'quotechar': '"'
-                    })
+                loader = UnstructuredCSVLoader(filepath)
             data = loader.load()
             data = text_splitter.split_documents(data)
             documents.extend(data)
